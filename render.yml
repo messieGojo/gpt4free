@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: gpt4free-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m g4f.api --host 0.0.0.0 --port $PORT
+    plan: free
